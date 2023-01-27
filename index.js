@@ -57,6 +57,15 @@ app.get('/todos/history', async (req, res) => {
     res.render('taskHistory', { tasks });
 })
 
+app.delete('/todos/history/:id', async (req, res) => {
+    const { id } = req.params;
+    const getTask = await Task_History.findByIdAndDelete(id);
+    console.log("histry deleted");
+    console.log(getTask);
+
+    res.redirect('/todos/history');
+})
+
 
 app.listen(3000, () => {
     console.log("LISTENING ON PORT 3000 ...");
