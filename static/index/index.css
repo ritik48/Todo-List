@@ -178,27 +178,28 @@ span.status{
     text-align: center;
     margin-top: 30px;
 }
-.update-btn{
+.btn{
     font-size: 1rem;
     margin-top: 1em;
     padding: 0.25em 0.4em;
 
+    width: fit-content;
     color: aqua;
     background-color: rgb(50, 50, 50);
     cursor: pointer;
     box-shadow: 0px 0px 3px 0.3px rgba(102, 102, 102,1);
     transition: all 0.03s ease-in;
 }
-.update-btn i{
+.btn i{
     font-size: 1.5rem;
     color: #73ff33;
     vertical-align: middle;
 
 }
-.update-btn:hover{
+.btn:hover{
     background-color: rgb(37, 37, 37);
 }
-.update-btn:active{
+.btn:active{
     transform: translate(1px,1px);
     box-shadow: 1px 1px 2px 0.3px rgba(102, 102, 102,1);
 }

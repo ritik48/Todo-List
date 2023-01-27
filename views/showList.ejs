@@ -35,7 +35,7 @@
                 <% for(let task of tasks) { %>
                     <div class="task__layout">
                         <div class="task__check_task">
-                            <input type="checkbox" class="task__input">
+                            <input type="checkbox" class="task__input" id=<%= task.id %>>
                             <p>
                                 <%= task.title %>
                             </p>
@@ -54,10 +54,12 @@
             <span class="status">No pending tasks. Keep it up !!!</span>
             <% } %>
             <% if(tasks.length!==0) { %>   
-            <form action=""><button class="update-btn">Update List</button></form>
+            <button class="btn update-btn">Update List</button>
+            <!-- <form action=""><button class="update-btn">Update List</button></form> -->
             <% } %> 
-            <form action=""><button class="update-btn">History <i class="material-icons">&#xe5c8;</i></button></form>
+            <form action=""><button class="btn">History <i class="material-icons">&#xe5c8;</i></button></form>
     </main>
+    <script src="updateList/update_list.js"></script>
 </body>
 
 </html>
