@@ -133,6 +133,11 @@ main {
 button {
     border: none;
 }
+
+a{
+    text-decoration: none;
+}
+
 a[category = 'homework']{
     background-color: #fe7a1b;
 
@@ -149,9 +154,9 @@ a[category='grocery']{
 a[category='general']{
     background-color: rgb(11, 205, 179);
 }
-a{
+a.task__category{
     font-size: 0.8rem;
-    text-decoration: none;
+    
     color: white;
     font-weight: 400;
     border-radius: 0.4em;
@@ -185,16 +190,15 @@ span.status{
 
     width: fit-content;
     color: aqua;
-    background-color: rgb(50, 50, 50);
+    background-color: transparent;
     cursor: pointer;
     box-shadow: 0px 0px 3px 0.3px rgba(102, 102, 102,1);
     transition: all 0.03s ease-in;
 }
 .btn i{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #73ff33;
     vertical-align: middle;
-
 }
 .btn:hover{
     background-color: rgb(37, 37, 37);
