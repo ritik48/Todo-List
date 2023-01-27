@@ -19,7 +19,7 @@ app.use(methodOverride('_method'));
 
 app.get('/todos', async (req, res) => {
     const tasks = await Task.find({});
-    console.log(tasks.length);
+    console.log(tasks);
     res.render('showList', { tasks });
 })
 
@@ -34,9 +34,9 @@ app.post('/todos', async (req, res) => {
 app.delete('/todos/:id', async (req, res) => {
     const { id } = req.params;
     const getTask = await Task.findByIdAndDelete(id);
+    console.log(getTask);
     res.redirect('/todos');
 })
-
 
 app.listen(3000, () => {
     console.log("LISTENING ON PORT 3000 ...");
