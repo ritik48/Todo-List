@@ -52,6 +52,11 @@ app.post('/todos/update/:id', async (req, res) => {
     res.redirect('/todos');
 })
 
+app.get('/todos/history', async (req, res) => {
+    const tasks = await Task_History.find({});
+    res.render('taskHistory', { tasks });
+})
+
 
 app.listen(3000, () => {
     console.log("LISTENING ON PORT 3000 ...");
