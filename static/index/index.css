@@ -30,6 +30,11 @@ input{
     outline: none;
     min-width: 60px;
 }
+
+p {
+    font-size: 1.2rem;
+}
+
 main {
     flex-direction: column;
     display: flex;
